@@ -48,7 +48,7 @@ router.put("/:id", async (req, res) => {
     console.log(result);
 });
 
-export const movierouter = router;
+
 
 //To delete movie//
 
@@ -58,3 +58,5 @@ router.delete("/:id", async (req, res) => {
     console.log(movie);
     movie ? res.send(movie) : res.status(404).send({ message: "Not found" });
 });
+
+export const movierouter = router;
