@@ -11,7 +11,7 @@ export async function PostMovie(newMovie) {
     return await client
         .db("show")
         .collection("movie")
-        .insertMany(newMovie);
+        .insertOne(newMovie);
 }
 export async function getMovie(req) {
     return await client

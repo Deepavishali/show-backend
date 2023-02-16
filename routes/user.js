@@ -52,4 +52,4 @@ router.post("/login", async (req, res) => {
 });
 
 
-export const usersRouter = router;
+export const userRouter = router;
