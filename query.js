@@ -1,5 +1,8 @@
 import {client} from './index.js';
 import bcrypt from "bcrypt";
+import nodemailer from 'nodemailer';
+import * as dotenv from 'dotenv';
+dotenv.config()
 
 export async function getMovieId(id) {
     return await client
@@ -60,3 +63,23 @@ export async function getUserByName(username){
         .collection("users")
         .findOne({username:username});
 }
+
+//mail//
+
+export const contactEmail = nodemailer.createTransport({
+    service: 'gmail',
+    port: 465,
+   secure: true,
+    auth: {
+      user: process.env.USER,
+      pass: process.env.PASS
+    },
+  });
+  
+  contactEmail.verify((error) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Ready to Send");
+    }
+  });
