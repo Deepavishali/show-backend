@@ -60,6 +60,7 @@ router.post("/contact",(req, res) => {
       from: name,
       to: email,
       subject: "Contact Form Submission",
+      Message:"Thankyou for contacting We will reach you soon !! Have a nice day !!😜",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
              <p>Message: ${message}</p>`,
