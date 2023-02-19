@@ -52,7 +52,7 @@ router.post("/login", async (req, res) => {
 });
 
 //setting route for contactform//
-router.post("/contact", (req, res) => {
+router.post("/contact",(req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message; 
